@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM PUMP - Premium Gym Clothes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+      
+        .home-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .gym-sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 180px;
+            height: 100vh;
+            background-color: #8B0000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            font-weight: bold;
+            letter-spacing: 0.2rem;
+            z-index: 100;
+        }
+
+        .home-content {
+            text-align: center;
+            margin-left: 180px;
+        }
+
+        .brand-name {
+            background-color: #e0e0e0;
+            color: #000;
+            padding: 15px 40px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 50px;
+        }
+
+        .bodybuilder-icon {
+            font-size: 15rem;
+            margin-bottom: 50px;
+        }
+
+        .pump-section {
+            background-color: #8B0000;
+            padding: 30px 60px;
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        .pump-text {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        
+        .login-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .login-header {
+            background-color: #e0e0e0;
+            color: #000;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 40px;
+        }
+
+        .form-label {
+            background-color: #8B0000;
+            padding: 15px 25px;
+            display: inline-block;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 20px;
+            background-color: #e0e0e0;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .login-btn {
+            background-color: #8B0000;
+            color: #fff;
+            padding: 15px 40px;
+            border: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .login-btn:hover {
+            background-color: #a00000;
+        }
+
+       
+        .categories-page {
+            min-height: 100vh;
+            padding: 80px 50px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .nav-btn {
+            background-color: #8B0000;
+            color: #fff;
+            padding: 20px 40px;
+            border: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .nav-btn:hover {
+            background-color: #a00000;
+        }
+
+        .page-header {
+            background-color: #e0e0e0;
+            color: #000;
+            padding: 15px 25px;
+            display: inline-block;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .promo-banner {
+            background-color: #8B0000;
+            padding: 60px 40px;
+            margin-bottom: 50px;
+        }
+        .discount-banner{
+            background-color:brown;
+            padding: 60px 40px;
+            margin-bottom: 50px;
+        }
+
+        .promo-text {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .discount-text {
+            font-size: 3rem;
+            font-weight: bolder;
+        }
+
+        .info-section {
+            margin-top: 50px;
+        }
+
+        .info-label {
+            background-color: #8B0000;
+            padding: 15px 25px;
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .info-box {
+            background-color: #8B0000;
+            padding: 20px 30px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            max-width: 600px;
+        }
+
+       
+        .measurements-page {
+            min-height: 100vh;
+            padding: 50px;
+        }
+
+        .measurements-header {
+            background-color: #8B0000;
+            padding: 20px 30px;
+            margin-bottom: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            max-width: 600px;
+        }
+
+        .measurement-group {
+            margin-bottom: 50px;
+            max-width: 400px;
+        }
+
+        .measurement-label {
+            background-color: #8B0000;
+            padding: 15px 25px;
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .measurement-input {
+            width: 100%;
+            padding: 25px;
+            background-color: #e0e0e0;
+            border: none;
+            font-size: 1rem;
+        }
+
+        
+        .products-page {
+            min-height: 100vh;
+            padding: 50px;
+        }
+
+        .products-header {
+            background-color: #8B0000;
+            padding: 20px 30px;
+            margin-bottom: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+        }
+
+        .product-card {
+            background-color: #111;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 300px;
+            background-color: #222;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .product-name {
+            background-color: #8B0000;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .product-price {
+            background-color: #8B0000;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .add-to-cart-btn {
+            background-color: #8B0000;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #a00000;
+        }
+
+        
+        .page-nav {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .page-nav button {
+            background-color: #8B0000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .page-nav button:hover {
+            background-color: #a00000;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .gym-sidebar {
+                width: 100px;
+                font-size: 2.5rem;
+            }
+
+            .home-content {
+                margin-left: 100px;
+            }
+
+            .pump-text {
+                font-size: 2.5rem;
+            }
+
+            .bodybuilder-icon {
+                font-size: 8rem;
+            }
+
+            .promo-text {
+                font-size: 2rem;
+            }
+            .discount-text{
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="page active" id="page1">
+        <div class="home-page">
+            <div class="gym-sidebar">
+                <div>G</div>
+                <div>Y</div>
+                <div>M</div>
+            </div>
+            <div class="home-content">
+                <div class="brand-name">GYM</div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgVIMsTiHISZjXnRT4E2Bxc8dQX5REAAQocQ&s" alt="Bodybuilder" class="bodybuilder-image">
+                <div class="pump-section">
+                    <div class="pump-text">PUMP</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="page" id="page2">
+        <div class="login-page">
+            <div class="login-container">
+                <div class="login-header">LOGIN</div>
+                
+                <div class="form-group">
+                    <div class="form-label">USERNAME:</div>
+                    <input type="text" class="form-input" id="username" placeholder="Enter username">
+                </div>
+
+                <div class="form-group">
+                    <div class="form-label">PASSWORD:</div>
+                    <input type="password" class="form-input" id="password" placeholder="Enter password">
+                </div>
+
+                <button class="login-btn" onclick="handleLogin()">LOGIN</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="page" id="page3">
+        <div class="categories-page">
+            <div class="nav-buttons">
+                <button class="nav-btn">HOODIES</button>
+                <button class="nav-btn">SHORTS</button>
+            </div>
+
+            <div class="page-header">HOME</div>
+
+            <div class="promo-banner">
+                <div class="promo-text">AWESOME<br>PROMO</div>
+            </div>
+            <div class="discount-banner">
+            <div class="discount-text">25% OFF</div>    
+            </div>
+              
+
+            <div class="info-section">
+                <div class="info-label">FOR MORE:</div>
+                <div class="info-box">Access our special program</div>
+                <div class="info-box">Starting at $4.99 to get the best deals delivered to you as they arrive</div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="page" id="page4">
+        <div class="measurements-page">
+            <div class="measurements-header">
+                Enter your upper body stats
+            </div>
+
+            <div class="measurement-group">
+                <div class="measurement-label">CHEST SIZE:</div>
+                <input type="text" class="measurement-input" placeholder="Enter chest size">
+            </div>
+
+            <div class="measurement-group">
+                <div class="measurement-label">ARMS NOT FLEXED:</div>
+                <input type="text" class="measurement-input" placeholder="Enter arm size">
+            </div>
+
+            <button class="login-btn" style="max-width: 400px;">SUBMIT</button>
+        </div>
+    </div>
+
+    
+    <div class="page" id="page5">
+        <div class="products-page">
+            <div class="products-header">FEATURED PRODUCTS</div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-bCLcbyy2DzczKKV_tPdiEs3SgTnmO9mNTg&s" alt="Bodybuilder" class="bodybuilder-image">
+                    <div class="product-name">ELASTIC SHORTS</div>
+                    <div class="product-price">$24.99</div>
+                    <button class="add-to-cart-btn">ADD TO CART</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="data:image/jpeg;base64,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" alt="Bodybuilder" class="bodybuilder-image">
+                    <div class="product-name">CLEAN CRISP HOODY</div>
+                    <div class="product-price">$24.99</div>
+                    <button class="add-to-cart-btn">ADD TO CART</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="data:image/jpeg;base64,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" alt="Bodybuilder" class="bodybuilder-image">
+                    <div class="product-name">PED SHIRT</div>
+                    <div class="product-price">$24.99</div>
+                    <button class="add-to-cart-btn">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="page-nav">
+        <button onclick="changePage(1)">Home</button>
+        <button onclick="changePage(2)">Login</button>
+        <button onclick="changePage(3)">Shop</button>
+        <button onclick="changePage(4)">Size</button>
+        <button onclick="changePage(5)">Products</button>
+    </div>
+
+    <script>
+        function handleLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username == "shehroz" && password == "123456") {
+                alert("Login successful!");
+            } else if (username == "shehroz" && password != "123456"){
+                alert("Re-enter username");
+            }
+            else{
+                alert("Incorrect password or username");
+            }
+        }
+
+        function changePage(pageNum) {
+            var pages = document.querySelectorAll('.page');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].classList.remove('active');
+            }
+            document.getElementById('page' + pageNum).classList.add('active');
+        }
+    </script>
+</body>
+</html>
