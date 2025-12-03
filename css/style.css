@@ -1,0 +1,173 @@
+/* ----------------------------- */
+/* BASIC RESET & GLOBAL STYLES   */
+/* ----------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    color: #222;
+    line-height: 1.6;
+    padding-bottom: 80px;
+}
+
+/* ----------------------------- */
+/* NAVIGATION BAR                */
+/* ----------------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+header h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #0066ff;
+}
+
+/* ----------------------------- */
+/* MAIN CONTENT WRAPPER          */
+/* ----------------------------- */
+
+main {
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ----------------------------- */
+/* HEADINGS                      */
+/* ----------------------------- */
+
+h1 {
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+/* ----------------------------- */
+/* FORMS                         */
+/* ----------------------------- */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+textarea {
+    height: 120px;
+}
+
+/* ----------------------------- */
+/* BUTTONS                       */
+/* ----------------------------- */
+
+button {
+    background: #0066ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #0047b3;
+}
+
+/* ----------------------------- */
+/* PRODUCT IMAGES & CARDS       */
+/* ----------------------------- */
+
+img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    width: 250px;
+    text-align: center;
+}
+
+.product-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ----------------------------- */
+/* FOOTER                        */
+/* ----------------------------- */
+
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ----------------------------- */
+/* FIT GUIDE PRODUCT LIST        */
+/* ----------------------------- */
+
+#productResults div {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    gap: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+}
