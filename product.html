@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Product - SportWear</title>
+<link rel="stylesheet" href="../css/style.css"></head>
+<body>
+<header><h2>SportWear</h2><nav>
+  <a href="../index.html">Home</a> |
+  <a href="about.html">About</a> |
+  <a href="fitguide.html">Fit Guide</a> |
+  <a href="cart.html">Cart</a>
+</nav></header>
+
+<main>
+  <h1 id="prodTitle">Product title</h1>
+  <img id="prodImage" src="../images/shirt01.png" alt="Product image" style="width:260px;">
+  <p id="prodPrice"></p>
+  <p id="prodDesc"></p>
+
+  <label>Select size</label>
+  <select id="sizeSelect"></select>
+
+  <br><br>
+  <button onclick="addToCart(getProductIdFromUrl(), document.getElementById('sizeSelect').value)">Add to Cart</button>
+
+  <h2>Recommended for this product</h2>
+  <div id="recommendedArea" class="product-container"></div>
+
+  <h2>Your Personalized Recommendations</h2>
+  <div id="personalRecs" class="product-container"></div>
+</main>
+
+<footer>&copy; 2025 SportWear. All rights reserved. <br>All product images are AI-generated.</footer>
+
+<script>
+  // small helper to get id from query string
+  function getProductIdFromUrl() {
+    const qs = new URLSearchParams(window.location.search);
+    return qs.get("id");
+  }
+</script>
+<script src="../js/main.js"></script>
+<script>
+  // after main.js loads, show personal recs
+  document.addEventListener('DOMContentLoaded', function(){
+    showPersonalRecommendations('personalRecs');
+  });
+</script>
+</body>
+</html>

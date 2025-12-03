@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fit Guide - SportWear</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header style="padding: 20px; background: #eee;">
+    <h2>SportWear</h2>
+    <nav>
+        <a href="../index.html">Home</a> |
+        <a href="about.html">About</a> |
+        <a href="product.html">Products</a> |
+        <a href="checkout.html">Checkout</a>
+    </nav>
+</header>
+
+<main style="max-width: 800px; margin: 40px auto;">
+
+    <h1>Find Your Perfect Fit</h1>
+    <p>
+        Enter your measurements and preferred fit style. Our system will recommend 
+        the perfect size and show matching products for your body type.
+    </p>
+
+    <form id="fitForm" style="margin-top: 30px;">
+
+        <label>Chest Size (cm)</label>
+        <input type="number" id="chest" required>
+
+        <label>Waist Size (cm)</label>
+        <input type="number" id="waist" required>
+
+        <label>Preferred Fit</label>
+        <select id="fitPreference">
+            <option value="standard">Standard</option>
+            <option value="oversized">Oversized</option>
+            <option value="compressed">Compressed</option>
+        </select>
+
+        <br><br>
+
+        <button type="button" onclick="calculateFit()" style="padding: 10px 20px;">
+            Get My Recommended Size
+        </button>
+
+    </form>
+
+    <h2 style="margin-top: 40px;">Your Size Recommendation</h2>
+    <p id="sizeResult" style="font-size: 20px; font-weight: bold;"></p>
+
+    <div id="productResults" style="margin-top: 30px;">
+        <!-- Recommended products will appear here -->
+    </div>
+
+</main>
+
+<footer style="margin-top: 50px; padding: 20px; background: #111; color: #fff; text-align: center;">
+    <p>&copy; 2025 SportWear. All rights reserved.</p>
+    <p>All product images on this website are AI-generated using approved tools.</p>
+</footer>
+
+<script src="../js/fitguide.js"></script>
+
+</body>
+</html>

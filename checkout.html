@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout - SportWear</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header style="padding: 20px; background: #eee;">
+    <h2>SportWear</h2>
+    <nav>
+        <a href="../index.html">Home</a> |
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<main style="max-width: 600px; margin: 40px auto;">
+
+    <h1>Checkout</h1>
+
+    <form id="checkoutForm">
+
+        <label>Full Name</label>
+        <input type="text" id="name" required>
+
+        <label>Email</label>
+        <input type="email" id="email" required>
+
+        <label>Phone</label>
+        <input type="text" id="phone" required>
+
+        <label>Address</label>
+        <textarea id="address" required></textarea>
+
+        <label>City</label>
+        <input type="text" id="city" required>
+
+        <label>Postal Code</label>
+        <input type="text" id="postal" required>
+
+        <label>Payment Method</label>
+        <select id="payment">
+            <option>Cash on Delivery</option>
+        </select>
+
+        <br><br>
+
+        <button type="button" onclick="placeOrder()" style="padding: 10px 20px;">
+            Place Order
+        </button>
+
+    </form>
+
+    <script>
+        function placeOrder() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let address = document.getElementById("address").value;
+
+            if (name === "" || email === "" || address === "") {
+                alert("Please fill in all required fields.");
+                console.log("Checkout error: Missing fields");
+                return;
+            }
+
+            alert("Order placed successfully!");
+            console.log("Order placed:", name, email);
+        }
+    </script>
+
+</main>
+
+<footer style="margin-top: 50px; padding: 20px; background: #111; color: #fff; text-align: center;">
+    <p>&copy; 2025 SportWear. All rights reserved.</p>
+    <p>All product images on this website are AI-generated using approved tools.</p>
+</footer>
+
+</body>
+</html>
